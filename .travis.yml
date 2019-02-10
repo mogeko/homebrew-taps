@@ -1,0 +1,20 @@
+language: generic
+
+sudo: required
+
+
+before_install:
+  - git config --global user.name "$USERNAME" 
+  - git config --global user.email "$EMAIL"
+
+before_script:
+  - chmod +x auto-update.sh
+  - chmod +x checker.sh
+  - chmod +x update.repo.sh
+  - chmod +x update.wiki.sh
+
+script:
+  - bash auto-update.sh
+  - bash update.repo.sh
+  - bash update.wiki.sh
+
