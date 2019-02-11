@@ -17,3 +17,4 @@ brew tap mogeko/taps
 ## Menu
 
 - [BaiduPCS-Go](https://github.com/Mogeko/homebrew-taps/wiki/BaiduPCS-Go) - v3.5.6 - 仿 Linux shell 文件处理命令的百度网盘命令行客户端
+- [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1112 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
