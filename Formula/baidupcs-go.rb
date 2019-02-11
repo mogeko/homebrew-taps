@@ -22,5 +22,7 @@ class BaidupcsGo < Formula
   test do
     system "#{bin}/BaiduPCS-Go", "--version"
     system "#{bin}/baidupcs", "--version"
+    system "BaiduPCS-Go", "--version"
+    system "baidupcs", "--version"
   end
 end
