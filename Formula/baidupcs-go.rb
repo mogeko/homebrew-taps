@@ -20,7 +20,8 @@ class BaidupcsGo < Formula
   end
 
   test do
-    system "#{bin}/BaiduPCS-Go", "--version"
+    output = shell_output("#{bin}/BaiduPCS-Go --version 2>&1")
+    assert_match "BaiduPCS-Go version v#{version}-devel", output
     system "#{bin}/baidupcs", "--version"
     system "BaiduPCS-Go", "--version"
     system "baidupcs", "--version"
