@@ -17,5 +17,6 @@ brew tap mogeko/taps
 ## Menu
 
 - [BaiduPCS-Go](https://github.com/Mogeko/homebrew-taps/wiki/BaiduPCS-Go) - v3.5.6 - 仿 Linux shell 文件处理命令的百度网盘命令行客户端
+- [gogs](https://github.com/Mogeko/homebrew-taps/wiki/gogs) - v0.11.86 - 一款轻量、稳定、可扩展的自助 Git 服务
 - [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - 2.8.2 - 基于 Socks5 代理方式的科学上网工具
 - [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1112 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
