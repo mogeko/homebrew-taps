@@ -15,7 +15,10 @@ do
         authur_name=$(cat $file | grep "url" | cut -d '/' -f 4)
         formula_name=$(cat $file | grep "url" | cut -d '/' -f 5)
 
-        log "./checker.sh $authur_name $formula_name"
-        ./checker.sh $authur_name $formula_name
+        if [ $formula_name != "shadowsocks" ]
+        then
+            log "./checker.sh $authur_name $formula_name"
+            ./checker.sh $authur_name $formula_name
+        fi
     fi
 done

@@ -11,13 +11,7 @@ script:
   - chmod +x checker.sh
   - chmod +x run.sh
   - ./run.sh
-  - echo ''
-  - echo '====================================='
   - echo 'Start deployment...'
-  - echo '====================================='
-  - echo ''
   - cd homebrew-taps
-  - git commit -am "travis automated update"
+  - git commit -am "travis automated update" || exit 0
   - git push  --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
-  - echo ''
-  - echo 'done.'

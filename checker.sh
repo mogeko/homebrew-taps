@@ -26,6 +26,15 @@ loop_parser(){
     done
 }
 
+clear(){
+    unset AUTHUR_NAME
+    unset FORMULA_NAME
+    unset result
+    unset V_VERSION
+    unset DOWNLOAD_URL
+    unset V_HASH256
+}
+
 log "parser $FORMULA_NAME download url"
 
 V_VERSION=$( loop_parser "tag_name" )
@@ -39,26 +48,27 @@ if [ -z "$V_VERSION" ]; then
 
 fi
 
-DOWNLOAD_URL="https://github.com/Wind4/vlmcsd/archive/"$V_VERSION".tar.gz"
+DOWNLOAD_URL="https://github.com/$AUTHUR_NAME/$FORMULA_NAME/archive/"$V_VERSION".tar.gz"
 
 if [ -z "$DOWNLOAD_URL" ]; then
 
-    log 'parser download url error, skip updv2ray-coreate.'
+    log 'parser download url error.'
     exit 0
 
 fi
 
 log "download url: $DOWNLOAD_URL  start downloading..."
 
-curl -L  $DOWNLOAD_URL > $FORMULA_NAME.source.tar.gz
+# wget -c $DOWNLOAD_URL -O $FORMULA_NAME.$V_VERSION.tar.gz
+curl -L  $DOWNLOAD_URL > $FORMULA_NAME.$V_VERSION.tar.gz
 
 
-if [ ! -e $FORMULA_NAME.source.tar.gz ]; then
+if [ ! -e $FORMULA_NAME.$V_VERSION.tar.gz ]; then
     log "file download failed!"
     exit 1
 fi
 
-V_HASH256=$(sha256sum $FORMULA_NAME.source.tar.gz |cut  -d ' ' -f 1)
+V_HASH256=$(sha256sum $FORMULA_NAME.$V_VERSION.tar.gz |cut  -d ' ' -f 1)
 
 log "file hash: $V_HASH256 parser $FORMULA_NAME version..."
 
@@ -70,3 +80,5 @@ log "update config...."
 
 sed -i "s#^\s*version.*#  version \"$V_VERSION\"#g" homebrew-taps/Formula/$FILE_NAME.rb
 sed -i "s#^\s*sha256.*#  sha256 \"$V_HASH256\"#g" homebrew-taps/Formula/$FILE_NAME.rb
+
+clear
