@@ -70,12 +70,3 @@ log "update config...."
 
 sed -i "s#^\s*version.*#  version \"$V_VERSION\"#g" homebrew-taps/Formula/$FILE_NAME.rb
 sed -i "s#^\s*sha256.*#  sha256 \"$V_HASH256\"#g" homebrew-taps/Formula/$FILE_NAME.rb
-
-
-log "update config done. start update repo..."
-
-cd homebrew-taps
-git commit -am "travis automated update"
-git push  --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
-
-log "update repo done."

@@ -1,5 +1,7 @@
 # Mogeko 的酒窖
 
+[![Build Status](https://travis-ci.org/Mogeko/homebrew-taps.svg?branch=master)](https://travis-ci.org/Mogeko/homebrew-taps)
+
 这里是 Mogeko 的酒窖。
 
 由 (只会修火柴盒的) 建筑大师史蒂夫亲自设计，修在 Github 葡萄园的㮟㮟角角里头。整体工程由未来科技有限公司承包修建。在施工中革命性的使用了火铜矿作为建筑材料，并创意性的摆放了大量的妖灵血，在保证风水的同时使酒窖常年保持 1000 °C 的理想温度，是养老休闲、练功修仙的好去处。
