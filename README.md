@@ -14,7 +14,7 @@
 brew tap mogeko/taps
 ```
 
-## Menu
+## Menu (It may be delayed)
 
 - [BaiduPCS-Go](https://github.com/Mogeko/homebrew-taps/wiki/BaiduPCS-Go) - v3.5.6 - 仿 Linux shell 文件处理命令的百度网盘命令行客户端
 - [frp](https://github.com/Mogeko/homebrew-taps/wiki/frp) - v0.24.1 - 一个可用于内网穿透的高性能的反向代理应用
