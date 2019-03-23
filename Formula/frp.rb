@@ -8,6 +8,8 @@ class Frp < Formula
   depends_on "go" => :build
 
   def install
+    # ENV["GO111MODULE"] = "on"
+    ENV["GOPROXY"] = "https://goproxy.io"
     system "make"
     bin.install "bin/frps"
     bin.install "bin/frpc"
@@ -15,9 +17,9 @@ class Frp < Formula
 
   test do
     output_s = shell_output("#{bin}/frps -v")
-    assert_match "#{version}", output_s
+    assert_match "#{version}", "v"+output_s
     output_c = shell_output("#{bin}/frpc -v")
-    assert_match "#{version}", output_c
+    assert_match "#{version}", "v"+output_c
     system "frps", "-v"
     system "frpc", "-v"
   end
