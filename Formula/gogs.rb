@@ -17,7 +17,7 @@ class Gogs < Formula
 
   test do
     output = shell_output("#{bin}/gogs -v")
-    assert_match "Gogs version #{version}.0130", output
+    assert_match "Gogs version #{version}.0130", "v"+output
     system "gogs", "-v"
   end
 end
