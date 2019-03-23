@@ -77,6 +77,20 @@ checker(){
     log_2 "update config done."
 }
 
+readme_manager(){
+    old_version=$(cat README.md | grep "$1" | cut -d ' ' -f 4)
+
+    if [ "$old_version" = "" ]; then
+
+        sed -i '$a - ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '"$formula_desc" homebrew-taps/README.md
+
+    else
+
+        sed -i "s/$1) \- ${old_version}/$1) - $2/g" homebrew-taps/README.md
+
+    fi
+}
+
 git clone https://github.com/Mogeko/homebrew-taps.git
 
 for file in ./Formula/*
@@ -85,11 +99,16 @@ do
 
         authur_name=$(cat $file | grep "url" | cut -d '/' -f 4)
         formula_name=$(cat $file | grep "url" | cut -d '/' -f 5)
+        formula_desc=$(cat $file | grep "desc" | cut -d '"' -f 2)
 
         if [ $formula_name != "shadowsocks" ]; then
 
             log_1 "./checker.sh $authur_name $formula_name"
             checker $authur_name $formula_name
+
+            log_2 "update README.md..."
+            readme_manager $formula_name $v_version
+            log_2 "update README.md done."
 
         fi
 

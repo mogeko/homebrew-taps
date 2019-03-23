@@ -19,7 +19,7 @@ brew tap mogeko/taps
 ## Menu (It may be delayed)
 
 - [BaiduPCS-Go](https://github.com/Mogeko/homebrew-taps/wiki/BaiduPCS-Go) - v3.5.6 - 仿 Linux shell 文件处理命令的百度网盘命令行客户端
-- [frp](https://github.com/Mogeko/homebrew-taps/wiki/frp) - v0.25.1 - 一个可用于内网穿透的高性能的反向代理应用
+- [frp](https://github.com/Mogeko/homebrew-taps/wiki/frp) - v0.24.1 - 一个可用于内网穿透的高性能的反向代理应用
 - [gogs](https://github.com/Mogeko/homebrew-taps/wiki/gogs) - v0.11.86 - 一款轻量、稳定、可扩展的自助 Git 服务
 - [jikefm](https://github.com/Mogeko/homebrew-taps/wiki/jikefm) - v0.3.0 - 即刻电台，一个摸鱼的小工具 (即友在哪里？(○'◡'○)ﾉ♥~)
 - [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - 2.8.2 - 基于 Socks5 代理方式的科学上网工具
