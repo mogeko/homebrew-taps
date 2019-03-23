@@ -8,10 +8,6 @@ before_install:
   - git config --global user.email "$EMAIL"
 
 script:
-  - chmod +x checker.sh
-  - chmod +x run.sh
-  - ./run.sh
-  - echo 'Start deployment...'
-  - cd homebrew-taps
-  - git commit -am "travis automated update" || exit 0
-  - git push  --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+  - chmod +x tools/auto-update.sh
+  - chmod +x tools/deploy.sh
+  - tools/auto-update.sh
