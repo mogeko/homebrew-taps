@@ -77,21 +77,65 @@ checker(){
     log_2 "update config done."
 }
 
-readme_manager(){
+readme_checker(){
     old_version=$(cat README.md | grep "$1" | cut -d ' ' -f 4)
 
     if [ "$old_version" = "" ]; then
 
-        sed -i '$a - ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '"$formula_desc" homebrew-taps/README.md
+        sed -i "- ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '"$formula_desc" homebrew-taps/README.md"
+        sed -i "- ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '"$formula_desc" homebrew-taps.wiki/Home.md"
+        wiki_commit "Updated" "Home"
 
     else
 
         sed -i "s/$1) \- ${old_version}/$1) - $2/g" homebrew-taps/README.md
+        sed -i "s/$1) \- ${old_version}/$1) - $2/g" homebrew-taps.wiki/Home.md
+        wiki_commit "Updated" "Home"
 
     fi
 }
 
-git clone https://github.com/Mogeko/homebrew-taps.git
+wiki_checker(){
+    if [ ! -f "homebrew-taps.wiki/$2.md" ]; then
+
+        touch "homebrew-taps.wiki/$2.md"
+        echo "> Github: [$1/$2](https://github.com/$1/$2)<br>" >> "homebrew-taps.wiki/$2.md"
+        echo "> Author: [$1](https://github.com/$1)<br>" >> "homebrew-taps.wiki/$2.md"
+        echo "> Version: $3<br>" >> "homebrew-taps.wiki/$2.md"
+        echo "" >> "homebrew-taps.wiki/$2.md"
+        echo "$formula_desc" >> "homebrew-taps.wiki/$2.md"
+        echo "" >> "homebrew-taps.wiki/$2.md"
+        echo "## Install" >> "homebrew-taps.wiki/$2.md"
+        echo "" >> "homebrew-taps.wiki/$2.md"
+        echo "\`\`\`" >> "homebrew-taps.wiki/$2.md"
+        echo "brew install $2" >> "homebrew-taps.wiki/$2.md"
+        echo "\`\`\`" >> "homebrew-taps.wiki/$2.md"
+        echo "" >> "homebrew-taps.wiki/$2.md"
+        wiki_commit "Created" $2
+
+    else
+
+        sed -i "s/^> Version: .*$/> Version: $3<br>/g" "homebrew-taps.wiki/$2.md"
+        wiki_commit "Created" $2
+
+    fi
+}
+
+wiki_commit(){
+    cd homebrew-taps.wiki
+
+    git add .
+    [ "$1" = "Updated" ] && git commit -m "Updated $2 (markdown)"
+    [ "$1" = "Created" ] && git commit -m "Created $2 (markdown)"
+
+    cd ..
+}
+
+
+log_1 "Start"
+
+git clone https://${GH_REF}
+git clone https://${GH_WIKI}
 
 for file in ./Formula/*
 do
@@ -103,23 +147,40 @@ do
 
         if [ $formula_name != "shadowsocks" ]; then
 
-            log_1 "./checker.sh $authur_name $formula_name"
+            log_1 "checker $authur_name $formula_name"
             checker $authur_name $formula_name
 
-            log_2 "update README.md..."
-            readme_manager $formula_name $v_version
-            log_2 "update README.md done."
+            log_1 "update README.md..."
+            readme_checker $formula_name $v_version
+            log_1 "update README.md done."
+
+            log_1 "update Wiki..."
+            wiki_checker $authur_name $formula_name $v_version
+            log_1 "update Wiki done."
 
         fi
 
     fi
 done
 
+
 log_1 "start update repo..."
 
 cd homebrew-taps
+git commit -am "travis automated update" || exit 0
+git push  --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+cd ..
 
-chmod +x tools/deploy.sh
-tools/deploy.sh push
+log_1 "update done."
+
+
+log_1 "start update wiki..."
+
+cd homebrew-taps.wiki
+git push --quiet "https://${GITHUB_TOKEN}@${GH_WIKI}" master:master
+cd ..
+
+log_1 "update done."
+
 
 log_1 "done."

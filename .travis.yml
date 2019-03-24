@@ -9,5 +9,4 @@ before_install:
 
 script:
   - chmod +x tools/auto-update.sh
-  - chmod +x tools/deploy.sh
   - tools/auto-update.sh
