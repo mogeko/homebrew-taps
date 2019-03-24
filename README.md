@@ -22,5 +22,6 @@ brew tap mogeko/taps
 - [frp](https://github.com/Mogeko/homebrew-taps/wiki/frp) - v0.25.1 - 一个可用于内网穿透的高性能的反向代理应用
 - [gogs](https://github.com/Mogeko/homebrew-taps/wiki/gogs) - v0.11.86 - 一款轻量、稳定、可扩展的自助 Git 服务
 - [jikefm](https://github.com/Mogeko/homebrew-taps/wiki/jikefm) - v0.3.0 - 即刻电台，一个摸鱼的小工具 (即友在哪里？(○'◡'○)ﾉ♥~)
-- [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - 2.8.2 - 基于 Socks5 代理方式的科学上网工具
+- [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - v2.8.2 - 基于 Socks5 代理方式的科学上网工具
+- [stegify](https://github.com/Mogeko/homebrew-taps/wiki/stegify) - v1.0 - 一款神奇的命令行工具，可以将任意文件隐藏到一张图片里
 - [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1112 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
