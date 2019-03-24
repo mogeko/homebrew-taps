@@ -172,15 +172,3 @@ git push  --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
 cd ..
 
 log_1 "update done."
-
-
-log_1 "start update wiki..."
-
-cd homebrew-taps.wiki
-git push --quiet "https://${GITHUB_TOKEN}@${GH_WIKI}" master:master
-cd ..
-
-log_1 "update done."
-
-
-log_1 "done."

@@ -10,3 +10,7 @@ before_install:
 script:
   - chmod +x tools/auto-update.sh
   - tools/auto-update.sh
+
+after_script:
+  - cd homebrew-taps.wiki
+  - git push --quiet "https://${GITHUB_TOKEN}@${GH_WIKI}" master:master
