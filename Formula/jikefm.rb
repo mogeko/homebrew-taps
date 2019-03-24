@@ -1,9 +1,9 @@
 class Jikefm < Formula
   desc "JIKEFM - 即刻电台📻"
   homepage "https://github.com/0neSe7en/jikefm"
-  version "v0.3.0"
+  version "v0.3.1"
   url "https://github.com/0neSe7en/jikefm/archive/#{version}.tar.gz"
-  sha256 "2d74c4141d7d7b4a99fa6538a65244170c1afb898cad34ce0827b2bb549ac0d2"
+  sha256 "52d8dbc66ffaa2f696a8501fd0a434701b0e29dc56a27fe72a229f13c135f2d3"
 
   depends_on "go" => :build
 

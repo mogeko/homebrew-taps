@@ -25,3 +25,4 @@ brew tap mogeko/taps
 - [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - v2.8.2 - 基于 Socks5 代理方式的科学上网工具
 - [stegify](https://github.com/Mogeko/homebrew-taps/wiki/stegify) - v1.0 - 一款神奇的命令行工具，可以将任意文件隐藏到一张图片里
 - [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1112 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
+- [lazygit](https://github.com/Mogeko/homebrew-taps/wiki/lazygit) - v0.7.2 - simple terminal UI for git commands
