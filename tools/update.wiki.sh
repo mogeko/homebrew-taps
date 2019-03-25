@@ -21,7 +21,7 @@ wiki_checker(){
     else
 
         sed -i "s/^> Version: .*$/> Version: $3<br>/g" "homebrew-taps.wiki/$2.md"
-        wiki_commit "Created" $2
+        wiki_commit "Updated" $2
 
     fi
 }
@@ -29,8 +29,11 @@ wiki_checker(){
 wiki_commit(){
     cd homebrew-taps.wiki
     git add .
-    [ "$1" = "Updated" ] && git commit -m "Updated $2 (markdown)"
-    [ "$1" = "Created" ] && git commit -m "Created $2 (markdown)"
+    status=`git status | grep "working tree clean" &> /dev/null; echo "$?"`
+    if [ "$status" == "1" ]; then
+        [ "$1" = "Updated" ] && git commit -m "Updated $2 (markdown)"
+        [ "$1" = "Created" ] && git commit -m "Created $2 (markdown)"
+    fi
     cd ..
 }
 
@@ -40,5 +43,5 @@ updete_wiki(){
     cd ..
 }
 
-[ "$0" = "tools/update.wiki.sh" ] && git clone https://${GH_REF}
+[ "$0" = "tools/update.wiki.sh" ] && git clone https://${GH_WIKI}
 [ "$0" = "tools/update.wiki.sh" ] && updete_wiki
