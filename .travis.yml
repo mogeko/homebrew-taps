@@ -7,10 +7,14 @@ before_install:
   - git config --global user.name "$USERNAME" 
   - git config --global user.email "$EMAIL"
 
-script:
+before_script:
   - chmod +x tools/auto-update.sh
-  - tools/auto-update.sh
+  - chmod +x tools/checker.sh
+  - chmod +x tools/update.repo.sh
+  - chmod +x tools/update.wiki.sh
 
-after_script:
-  - cd homebrew-taps.wiki
-  - git push --quiet "https://${GITHUB_TOKEN}@${GH_WIKI}" master:master
+script:
+  - tools/auto-update.sh
+  - tools/update.repo.sh
+  - tools/update.wiki.sh
+
