@@ -74,11 +74,15 @@ readme_checker(){
 
     if [ "$old_version" = "" ]; then
 
+        log_0 "update README.md..."
         sed -i '- ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '$formula_desc homebrew-taps/README.md
+        log_0 "update README.md done."
 
     else
 
+        log_0 "update README.md..."
         sed -i "s/$1) \- ${old_version}/$1) - $2/g" homebrew-taps/README.md
+        log_0 "update README.md done."
 
     fi
 }

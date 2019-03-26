@@ -31,13 +31,9 @@ do
             log_0 "checker $authur_name $formula_name"
             checker $authur_name $formula_name
 
-            log_0 "update README.md..."
             readme_checker $formula_name $v_version
-            log_0 "update README.md done."
 
-            log_0 "update Wiki..."
             wiki_checker $authur_name $formula_name $v_version
-            log_0 "update Wiki done."
 
         fi
 
