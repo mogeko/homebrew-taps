@@ -10,5 +10,7 @@ update_repo(){
     cd ..
 }
 
+
 [ "$0" = "tools/update.repo.sh" ] && git clone https://${GH_REF}
 [ "$0" = "tools/update.repo.sh" ] && update_repo
+

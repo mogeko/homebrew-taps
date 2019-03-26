@@ -1,5 +1,13 @@
 #!/bin/bash
 
+log_1(){
+    echo ''
+    echo '-------------------------------------'
+    echo "$*"
+    echo '-------------------------------------'
+    echo ''
+}
+
 wiki_checker(){
     if [ ! -f "homebrew-taps.wiki/$2.md" ]; then
 
@@ -48,6 +56,7 @@ sync_readme2wikihome(){
     sed -n '12,$p' homebrew-taps/README.md > homebrew-taps.wiki/Home.md
     wiki_commit "Updated" "Home"
 }
+
 
 [ "$0" = "tools/update.wiki.sh" ] && git clone https://${GH_WIKI}
 [ "$0" = "tools/update.wiki.sh" ] && sync_readme2wikihome

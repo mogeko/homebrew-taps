@@ -13,30 +13,36 @@ log_0(){
     echo ''
 }
 
+EXCLUDE_LIST=("shadowsocks")
+EXCLUDE=($(printf '%s\n' "${EXCLUDE_LIST[@]}" | sort))
+
 log_0 "Start"
 
 git clone https://${GH_REF}
 git clone https://${GH_WIKI}
 
+set i=0
 for file in ./Formula/*
 do
-    if test -f $file; then
+    formula_desc=$(cat $file | grep "desc" | cut -d '"' -f 2)
+    authur_name=$(cat $file | grep "url" | cut -d '/' -f 4)
+    formula_name=$(cat $file | grep "url" | cut -d '/' -f 5)
 
-        authur_name=$(cat $file | grep "url" | cut -d '/' -f 4)
-        formula_name=$(cat $file | grep "url" | cut -d '/' -f 5)
-        formula_desc=$(cat $file | grep "desc" | cut -d '"' -f 2)
+    if [ "$formula_name" = "${EXCLUDE[$i]}" ]; then
 
-        if [ $formula_name != "shadowsocks" ]; then
+        log_0 "Passing ${EXCLUDE[$i]}"
+        i=$i+1
 
-            log_0 "checker $authur_name $formula_name"
-            checker $authur_name $formula_name
+    elif test -f $file; then
 
-            readme_checker $formula_name $v_version
+        log_0 "Checking $formula_name"
 
-            wiki_checker $authur_name $formula_name $v_version
+        checker $authur_name $formula_name
 
-        fi
+        readme_checker $formula_name $v_version
 
+        wiki_checker $authur_name $formula_name $v_version
+        
     fi
 done
 
