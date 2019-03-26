@@ -31,10 +31,9 @@ wiki_commit(){
     git add .
     status=`git status | grep "working tree clean" &> /dev/null; echo "$?"`
     if [ "$status" == "1" ]; then
-        log_0 "update Wiki..."
+        log_1 "update Wiki..."
         [ "$1" = "Updated" ] && git commit -m "Updated $2 (markdown)"
         [ "$1" = "Created" ] && git commit -m "Created $2 (markdown)"
-        log_0 "update Wiki done."
     fi
     cd ..
 }
