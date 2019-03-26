@@ -44,4 +44,5 @@ updete_wiki(){
 }
 
 [ "$0" = "tools/update.wiki.sh" ] && git clone https://${GH_WIKI}
+[ "$0" = "tools/update.wiki.sh" ] && wiki_commit "Updated" "Home"
 [ "$0" = "tools/update.wiki.sh" ] && updete_wiki

@@ -74,15 +74,13 @@ readme_checker(){
 
     if [ "$old_version" = "" ]; then
 
-        sed -i "- ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '"$formula_desc" homebrew-taps/README.md"
-        sed -i "- ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '"$formula_desc" homebrew-taps.wiki/Home.md"
-        wiki_commit "Updated" "Home"
+        sed -i '- ['$1'](https://github.com/Mogeko/homebrew-taps/wiki/'$1') - '$2' - '$formula_desc homebrew-taps/README.md
+        sed -n '12,$p' homebrew-taps/README.md > homebrew-taps.wiki/Home.md
 
     else
 
         sed -i "s/$1) \- ${old_version}/$1) - $2/g" homebrew-taps/README.md
         sed -i "s/$1) \- ${old_version}/$1) - $2/g" homebrew-taps.wiki/Home.md
-        wiki_commit "Updated" "Home"
 
     fi
 }
