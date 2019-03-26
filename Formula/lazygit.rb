@@ -6,6 +6,7 @@ class Lazygit < Formula
   sha256 "d0be7a4ef6b5946fc10808d17439962d914782e7b47977d79370b595eada2493"
 
   depends_on "go" => :build
+  depends_on "git"
 
   def install
     # ENV["GO111MODULE"] = "on"
