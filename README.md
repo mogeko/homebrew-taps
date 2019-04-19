@@ -1,6 +1,6 @@
 # Mogeko 的酒窖
 
-[![Build Status](https://travis-ci.org/Mogeko/homebrew-taps.svg?branch=master)](https://travis-ci.org/Mogeko/homebrew-taps)
+[![Build Status](https://travis-ci.org/Mogeko/homebrew-taps.svg?branch=auto-update)](https://travis-ci.org/Mogeko/homebrew-taps)
 
 这里是 Mogeko 的酒窖。
 
