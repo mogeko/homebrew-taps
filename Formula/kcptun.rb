@@ -3,7 +3,7 @@ class Kcptun < Formula
   homepage "https://github.com/xtaci/kcptun"
   version "v20190424"
   url "https://github.com/xtaci/kcptun/archive/#{version}.tar.gz"
-  sha256 "ecccfd8d7dd19967d9be86be093082bd0c33850f19697b40a51a787df06150e2"
+  sha256 "5651fd3ce072d96b604df7d884950054ae8c06f00400727cdb77348609d54ffc"
 
   depends_on "go" => :build
 
