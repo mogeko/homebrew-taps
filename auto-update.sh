@@ -13,7 +13,7 @@ log_0(){
     echo ''
 }
 
-EXCLUDE_LIST=("shadowsocks")
+EXCLUDE_LIST=("")
 EXCLUDE=($(printf '%s\n' "${EXCLUDE_LIST[@]}" | sort))
 
 log_0 "Start"

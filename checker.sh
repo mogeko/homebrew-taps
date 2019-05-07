@@ -11,7 +11,7 @@ log_1(){
 loop_parser(){
     while true
     do
-       result=$(curl -s https://api.github.com/repos/"$authur_name"/"$formula_name"/releases/latest | grep "$1" | cut -d '"' -f 4)
+       result=$(curl https://github.com/"$authur_name"/"$formula_name"/tags | grep "<a href=\"/$authur_name/$formula_name/releases/tag/" | cut -d '"' -f 2 | cut -d '/' -f 6 | head -1)
        if [ ! -z "$result" ]; then
         echo $result
         break
