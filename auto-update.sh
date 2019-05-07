@@ -41,8 +41,9 @@ do
 
         readme_checker $formula_name $v_version
 
+        update_repo $formula_name $v_version
+
         wiki_checker $authur_name $formula_name $v_version
-        
     fi
 done
 
