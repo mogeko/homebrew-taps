@@ -9,7 +9,7 @@ class Lazygit < Formula
   depends_on "git"
 
   def install
-    # ENV["GO111MODULE"] = "on"
+    ENV["GO111MODULE"] = "auto"
     ENV["GOPROXY"] = "https://goproxy.io"
     system "go", "build", "-o", "bin/lazygit"
 

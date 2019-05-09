@@ -8,7 +8,7 @@ class Jikefm < Formula
   depends_on "go" => :build
 
   def install
-    # ENV["GO111MODULE"] = "on"
+    ENV["GO111MODULE"] = "auto"
     ENV["GOPROXY"] = "https://goproxy.io"
     system "go", "build", "-o", "bin/jikefm"
 

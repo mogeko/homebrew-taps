@@ -9,7 +9,7 @@ class Docui < Formula
   # depends_on "docker"
 
   def install
-    # ENV["GO111MODULE"] = "on"
+    ENV["GO111MODULE"] = "auto"
     ENV["GOPROXY"] = "https://goproxy.io"
     system "make"
 
@@ -24,6 +24,6 @@ class Docui < Formula
   end
 
   test do
-    system "docui" "--help"
+    system "docui", "--help"
   end
 end
