@@ -1,9 +1,9 @@
 class Lazygit < Formula
   desc "simple terminal UI for git commands"
   homepage "https://github.com/jesseduffield/lazygit"
-  version "v0.7.2"
+  version "v0.8"
   url "https://github.com/jesseduffield/lazygit/archive/#{version}.tar.gz"
-  sha256 "d0be7a4ef6b5946fc10808d17439962d914782e7b47977d79370b595eada2493"
+  sha256 "0205046c14edc1de2c01131907e88566cc0c9c6d4714ec57d2b6a46c9bb5f7e6"
 
   depends_on "go" => :build
   depends_on "git"
