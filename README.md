@@ -26,7 +26,7 @@ brew tap mogeko/taps
 - [jikefm](https://github.com/Mogeko/homebrew-taps/wiki/jikefm) - v0.3.1 - 即刻电台，一个摸鱼的小工具
 - [kcptun](https://github.com/Mogeko/homebrew-taps/wiki/kcptun) - v20190515 - 可能是世界上最快的 UDP 传输工具了
 - [lazygit](https://github.com/Mogeko/homebrew-taps/wiki/lazygit) - v0.8 - 一个用于管理 Git 的交互式命令行工具 (TUI)
-- [Modlishka](https://github.com/Mogeko/homebrew-taps/wiki/Modlishka) - v.1.0.0 - 钓鱼网站生成器，会根据给定的模板生成一个钓鱼网站，并记录敏感信息
+- [Modlishka](https://github.com/Mogeko/homebrew-taps/wiki/Modlishka) - v.1.1.0 - 钓鱼网站生成器，会根据给定的模板生成一个钓鱼网站，并记录敏感信息
 - [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - 2.8.2 - 基于 Socks5 代理方式的科学上网工具
 - [stegify](https://github.com/Mogeko/homebrew-taps/wiki/stegify) - v1.0 - 一款神奇的命令行工具，可以将任意文件隐藏到一张图片里
 - [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1112 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
