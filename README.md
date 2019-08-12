@@ -22,7 +22,7 @@ brew tap mogeko/taps
 - [docui](https://github.com/Mogeko/homebrew-taps/wiki/docui) - 1.0.3 - 一个用于管理 Docker 的交互式命令行工具 (TUI)
 - [frp](https://github.com/Mogeko/homebrew-taps/wiki/frp) - v0.28.2 - 一个可用于内网穿透的高性能的反向代理应用
 - [gameboy.live](https://github.com/Mogeko/homebrew-taps/wiki/gameboy.live) - 0.1 - 一个 Game Boy 模拟器，可以用来在终端 (或 GUI) 上玩老游戏
-- [gogs](https://github.com/Mogeko/homebrew-taps/wiki/gogs) - v0.11.86 - 一款轻量、稳定、可扩展的自助 Git 服务
+- [gogs](https://github.com/Mogeko/homebrew-taps/wiki/gogs) - v0.11.91 - 一款轻量、稳定、可扩展的自助 Git 服务
 - [jikefm](https://github.com/Mogeko/homebrew-taps/wiki/jikefm) - v0.3.1 - 即刻电台，一个摸鱼的小工具
 - [kcptun](https://github.com/Mogeko/homebrew-taps/wiki/kcptun) - v20190809 - 可能是世界上最快的 UDP 传输工具了
 - [lazygit](https://github.com/Mogeko/homebrew-taps/wiki/lazygit) - v0.8.1 - 一个用于管理 Git 的交互式命令行工具 (TUI)

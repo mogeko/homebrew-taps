@@ -1,9 +1,9 @@
 class Gogs < Formula
   desc "Gogs is a painless self-hosted Git service."
   homepage "https://gogs.io"
-  version "v0.11.86"
+  version "v0.11.91"
   url "https://github.com/gogs/gogs/archive/#{version}.tar.gz"
-  sha256 "1745610d42a2ec6dd7d6e306ae7a1b120e5fbcb646c06738b332cc99f170b152"
+  sha256 "6808db68a5952504b81f35fda29ddadde676a91d792262dcf7c3d90be85453eb"
 
   depends_on "go" => :build
 
