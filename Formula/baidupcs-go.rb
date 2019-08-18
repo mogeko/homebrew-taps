@@ -1,9 +1,9 @@
 class BaidupcsGo < Formula
   desc "仿 Linux shell 文件处理命令的百度网盘命令行客户端"
   homepage "https://github.com/iikira/BaiduPCS-Go"
-  version "v3.5.6"
+  version "v3.6"
   url "https://github.com/iikira/BaiduPCS-Go/archive/#{version}.tar.gz"
-  sha256 "0b2abd18c5101d5255faa31c713cbebad3804af07c1a008a5b9b799060beb12a"
+  sha256 "23ff3289128b13baf3190b489f9a085f5b701491295e5be4415318475e8f3907"
   head "https://github.com/iikira/BaiduPCS-Go.git"
 
   depends_on "go" => :build
