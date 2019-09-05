@@ -3,7 +3,7 @@ class Docui < Formula
   homepage "https://github.com/skanehira/docui"
   version "2.0.1"
   url "https://github.com/skanehira/docui/archive/#{version}.tar.gz"
-  sha256 "a6759930ecac7587f21c1ffba10d52bf735a49a412944ab71146a7c809513da4"
+  sha256 "03f953365842f94af6ff1fe2949d94036b88d0504daef71f2743b34099457de4"
 
   depends_on "go" => :build
   # depends_on "docker"
