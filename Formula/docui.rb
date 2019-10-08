@@ -1,9 +1,9 @@
 class Docui < Formula
   desc "TUI Client for Docker"
   homepage "https://github.com/skanehira/docui"
-  version "2.0.1"
+  version "2.0.3"
   url "https://github.com/skanehira/docui/archive/#{version}.tar.gz"
-  sha256 "03f953365842f94af6ff1fe2949d94036b88d0504daef71f2743b34099457de4"
+  sha256 "bd5268baf76eb9ed2fec663a1c07adcfb0fd8217be8c305aa76eddc8af877942"
 
   depends_on "go" => :build
   # depends_on "docker"
