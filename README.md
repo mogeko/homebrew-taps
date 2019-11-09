@@ -24,7 +24,7 @@ brew tap mogeko/taps
 - [gameboy.live](https://github.com/Mogeko/homebrew-taps/wiki/gameboy.live) - 0.1 - 一个 Game Boy 模拟器，可以用来在终端 (或 GUI) 上玩老游戏
 - [gogs](https://github.com/Mogeko/homebrew-taps/wiki/gogs) - v0.11.91 - 一款轻量、稳定、可扩展的自助 Git 服务
 - [jikefm](https://github.com/Mogeko/homebrew-taps/wiki/jikefm) - v0.3.1 - 即刻电台，一个摸鱼的小工具
-- [kcptun](https://github.com/Mogeko/homebrew-taps/wiki/kcptun) - v20191107 - 可能是世界上最快的 UDP 传输工具了
+- [kcptun](https://github.com/Mogeko/homebrew-taps/wiki/kcptun) - v20191109 - 可能是世界上最快的 UDP 传输工具了
 - [lazygit](https://github.com/Mogeko/homebrew-taps/wiki/lazygit) - v0.9 - 一个用于管理 Git 的交互式命令行工具 (TUI)
 - [Modlishka](https://github.com/Mogeko/homebrew-taps/wiki/Modlishka) - v.1.1.0 - 钓鱼网站生成器，会根据给定的模板生成一个钓鱼网站，并记录敏感信息
 - [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - 2.8.2 - 基于 Socks5 代理方式的科学上网工具
