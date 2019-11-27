@@ -1,9 +1,9 @@
 class Kcptun < Formula
   desc "A Stable & Secure Tunnel Based On KCP with N:M Multiplexing"
   homepage "https://github.com/xtaci/kcptun"
-  version "v20191112"
+  version "v20191127"
   url "https://github.com/xtaci/kcptun/archive/#{version}.tar.gz"
-  sha256 "63fd7647cce7488c193ed74f96c2ec377b8b7466f0661bf021d414c68c2fe78b"
+  sha256 "35375d7633871f954d2a3a1a34704a0a27a7e55ac75102f22ead545cfa2565da"
 
   depends_on "go" => :build
 
