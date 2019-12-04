@@ -17,6 +17,32 @@ class Kcptun < Formula
     bin.install "bin/kcptuns"
   end
 
+  def plist; <<~EOS
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.ap
+    <plist version="1.0">
+    <dict>
+      <key>KeepAlive</key>
+      <true/>
+      <key>Label</key>
+      <string>#{plist_name}</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>#{opt_bin}/kcptun-client</string>
+        <string>-c</string>
+        <string>#{etc}/kcptun/config.json</string>
+      </array>
+      <key>RunAtLoad</key>
+      <true/>
+      <key>StandardErrorPath</key>
+      <string>#{var}/log/kcptun-client-error.log</string>
+      <key>StandardOutPath</key>
+      <string>#{var}/log/kcptun-client.log</string>
+    </dict>
+    </plist>
+  EOS
+  end
+
   test do
     client_version = shell_output("#{bin}/kcptunc -v")
     assert_match "kcptun version SELFBUILD", client_version
