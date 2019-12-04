@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GameboyLive < Formula
   desc 'A basic gameboy emulator with terminal "Cloud Gaming" support'
   homepage 'https://github.com/HFO4/gameboy.live'
