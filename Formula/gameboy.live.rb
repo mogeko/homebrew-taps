@@ -1,4 +1,4 @@
-class Docui < Formula
+class GameboyLive < Formula
   desc "A basic gameboy emulator with terminal \"Cloud Gaming\" support"
   homepage "https://github.com/HFO4/gameboy.live"
   version "0.1"
