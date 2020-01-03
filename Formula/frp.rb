@@ -1,9 +1,9 @@
 class Frp < Formula
   desc "A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet."
   homepage "https://github.com/fatedier/frp"
-  version "v0.30.0"
+  version "v0.31.0"
   url "https://github.com/fatedier/frp/archive/#{version}.tar.gz"
-  sha256 "824698fbe6b94b534cdea75dbd8c58b35e1ec410b13e106722e16baef3075e97"
+  sha256 "75aab529356105a5020d08084c9df27aac808a11a7cd2d2e36e4b5be7f8a6de4"
 
   depends_on "go" => :build
 
