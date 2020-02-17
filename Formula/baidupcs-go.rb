@@ -3,7 +3,7 @@ class BaidupcsGo < Formula
   homepage "https://github.com/iikira/BaiduPCS-Go"
   version "v3.6.1"
   url "https://github.com/iikira/BaiduPCS-Go/archive/#{version}.tar.gz"
-  sha256 "07e1d802e6b49425a53b883c354d8b753de55f7005ac8c7b27cd8396db0447da"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   head "https://github.com/iikira/BaiduPCS-Go.git"
 
   depends_on "go" => :build
