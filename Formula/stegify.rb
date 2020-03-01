@@ -1,9 +1,9 @@
 class Stegify < Formula
   desc "Go tool for LSB steganography, capable of hiding any file within an image."
-  version "v1.1"
+  version "v1.2"
   homepage "https://github.com/DimitarPetrov/stegify"
   url "https://github.com/DimitarPetrov/stegify/archive/#{version}.tar.gz"
-  sha256 "33c4111447a0e2538e211c1b787b726e895b57a2f25a4f7a11002e1f3357d1f4"
+  sha256 "ce692aec6a26b3a757175d9a6092feb625aefadb2f76c9e60c10caf7f19ab316"
 
   depends_on "go" => :build
 
