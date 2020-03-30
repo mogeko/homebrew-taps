@@ -29,5 +29,5 @@ brew tap mogeko/taps
 - [Modlishka](https://github.com/Mogeko/homebrew-taps/wiki/Modlishka) - v.1.1.0 - 钓鱼网站生成器，会根据给定的模板生成一个钓鱼网站，并记录敏感信息
 - [shadowsocks](https://github.com/Mogeko/homebrew-taps/wiki/shadowsocks) - 2.8.2 - 基于 Socks5 代理方式的科学上网工具
 - [stegify](https://github.com/Mogeko/homebrew-taps/wiki/stegify) - v1.2 - 一款神奇的命令行工具，可以将任意文件隐藏到一张图片里
-- [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1112 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
+- [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1113 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
 - [wuzz](https://github.com/Mogeko/homebrew-taps/wiki/wuzz) - v0.4.0 - 一个用于调试 HTTP 请求的交互式命令行工具 (TUI)
