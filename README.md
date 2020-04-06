@@ -18,7 +18,7 @@ brew tap mogeko/taps
 
 ## Menu
 
-- [BaiduPCS-Go](https://github.com/Mogeko/homebrew-taps/wiki/BaiduPCS-Go) - v3.6.1 - 仿 Linux shell 文件处理命令的百度网盘命令行客户端
+- [BaiduPCS-Go](https://github.com/Mogeko/homebrew-taps/wiki/BaiduPCS-Go) - v3.6.2 - 仿 Linux shell 文件处理命令的百度网盘命令行客户端
 - [docui](https://github.com/Mogeko/homebrew-taps/wiki/docui) - 2.0.4 - 一个用于管理 Docker 的交互式命令行工具 (TUI)
 - [frp](https://github.com/Mogeko/homebrew-taps/wiki/frp) - v0.32.1 - 一个可用于内网穿透的高性能的反向代理应用
 - [gameboy.live](https://github.com/Mogeko/homebrew-taps/wiki/gameboy.live) - 0.1 - 一个 Game Boy 模拟器，可以用来在终端 (或 GUI) 上玩老游戏
