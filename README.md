@@ -31,3 +31,4 @@ brew tap mogeko/taps
 - [stegify](https://github.com/Mogeko/homebrew-taps/wiki/stegify) - v1.2 - 一款神奇的命令行工具，可以将任意文件隐藏到一张图片里
 - [vlmcsd](https://github.com/Mogeko/homebrew-taps/wiki/vlmcsd) - svn1113 - 一个可以激活批量激活版 (vol) Windows 和 Office 的 KMS 服务器
 - [wuzz](https://github.com/Mogeko/homebrew-taps/wiki/wuzz) - v0.4.0 - 一个用于调试 HTTP 请求的交互式命令行工具 (TUI)
+- [manpages-zh](https://github.com/Mogeko/homebrew-taps/wiki/manpages-zh) - v1.6.3.3 - 中文 man 手册页 | Chinese Manual Pages
