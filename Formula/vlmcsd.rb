@@ -1,26 +1,28 @@
-class Vlmcsd < Formula
-  desc "KMS Emulator in C"
-  version "svn1113"
-  homepage "https://github.com/Wind4/vlmcsd"
-  url "https://github.com/Wind4/vlmcsd/archive/#{version}.tar.gz"
-  sha256 "62f55c48f5de1249c2348ab6b96dabbe7e38899230954b0c8774efb01d9c42cc"
-  head "https://github.com/Wind4/vlmcsd.git"
+# frozen_string_literal: true
 
-  depends_on "make" => :build
-  uses_from_macos "llvm" => :build
+class Vlmcsd < Formula
+  desc 'KMS Emulator in C'
+  version 'svn1113'
+  homepage 'https://github.com/Wind4/vlmcsd'
+  url "https://github.com/Wind4/vlmcsd/archive/#{version}.tar.gz"
+  sha256 '62f55c48f5de1249c2348ab6b96dabbe7e38899230954b0c8774efb01d9c42cc'
+  head 'https://github.com/Wind4/vlmcsd.git'
+
+  depends_on 'make' => :build
+  uses_from_macos 'llvm' => :build
 
   def install
-    system "make", "CC=clang"
-    bin.install "bin/vlmcsd"
-    bin.install "bin/vlmcs"
-    (etc/"vlmcsd").mkpath
-    etc.install "etc/vlmcsd.ini" => "vlmcsd/vlmcsd.ini"
-    etc.install "etc/vlmcsd.kmd" => "vlmcsd/vlmcsd.kmd"
-    man1.install "man/vlmcs.1"
-    man7.install "man/vlmcsd.7"
-    man8.install "man/vlmcsd.8"
-    man5.install "man/vlmcsd.ini.5"
-    man1.install "man/vlmcsdmulti.1"
+    system 'make', 'CC=clang'
+    bin.install 'bin/vlmcsd'
+    bin.install 'bin/vlmcs'
+    (etc / 'vlmcsd').mkpath
+    etc.install 'etc/vlmcsd.ini' => 'vlmcsd/vlmcsd.ini'
+    etc.install 'etc/vlmcsd.kmd' => 'vlmcsd/vlmcsd.kmd'
+    man1.install 'man/vlmcs.1'
+    man7.install 'man/vlmcsd.7'
+    man8.install 'man/vlmcsd.8'
+    man5.install 'man/vlmcsd.ini.5'
+    man1.install 'man/vlmcsdmulti.1'
   end
 
   def caveats
@@ -37,7 +39,7 @@ class Vlmcsd < Formula
     EOS
   end
 
-  plist_options :manual => "vlmcsd"
+  plist_options manual: 'vlmcsd'
 
   def plist
     <<~EOS
@@ -70,7 +72,7 @@ class Vlmcsd < Formula
     assert_match /vlmcs/, output
     begin
       pid = fork do
-        exec "#{bin}/vlmcsd", "-D"
+        exec "#{bin}/vlmcsd", '-D'
       end
       # Run vlmcsd, then use vlmcs to check
       # the running status of vlmcsd
