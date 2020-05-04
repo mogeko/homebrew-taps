@@ -2,10 +2,10 @@
 
 class Vlmcsd < Formula
   desc 'KMS Emulator in C'
-  version 'svn1113'
+  version "svn1113"
   homepage 'https://github.com/Wind4/vlmcsd'
   url "https://github.com/Wind4/vlmcsd/archive/#{version}.tar.gz"
-  sha256 '62f55c48f5de1249c2348ab6b96dabbe7e38899230954b0c8774efb01d9c42cc'
+  sha256 "62f55c48f5de1249c2348ab6b96dabbe7e38899230954b0c8774efb01d9c42cc"
   head 'https://github.com/Wind4/vlmcsd.git'
 
   depends_on 'make' => :build
